@@ -30,7 +30,8 @@ A starter to build web applications on Reddit's developer platform
 
 This template comes with a pre-configured cursor environment. To get started, [download cursor](https://www.cursor.com/downloads) and enable the `devvit-mcp` when prompted.
 
-                          * * * * * * * * * * * * * * * * * * *                                
+---
+                         
 # ✨ The One-Word Story ✍️
 
 > *A collaborative multiplayer game built for the Reddit Developer Platform Hackathon.*
