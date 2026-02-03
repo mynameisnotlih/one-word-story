@@ -52,7 +52,16 @@ router.post('/api/submit-word', async (req, res) => {
       words: ['Once', 'upon', 'a', 'time...'], 
       authors: ['System', 'System', 'System', 'System'] 
     };
-    
+     // Security check 
+    // ---------------------------------------------------------
+    if (state.authors.length > 0) {
+      const lastAuthor = state.authors[state.authors.length - 1];
+      if (lastAuthor === username) {
+        return res.status(400).json({ error: 'You cannot play twice!' });
+      }
+    }
+    // ---------------------------------------------------------
+
     // 2. Add new data
     state.words.push(word);
     state.authors.push(username);
